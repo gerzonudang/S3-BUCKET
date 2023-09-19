@@ -25,13 +25,7 @@ app.post('/api/upload', async (req, res) => {
     .then(data => {
       console.log(data.Location);
       res.send(`
-    <img src='${data.Location}'><<uploaded <code>"Node.js"</code>
-    <form action="/api/upload" enctype="multipart/form-data" method="post">
-      <div>Select a file: 
-        <input name="file" type="file" />
-      </div>
-      <input type="submit" value="Upload" />
-    </form>
+    <img src='${data.Location}'/><br><h2>Success?</h2>
 
   `);
       // res.status(200).json({
